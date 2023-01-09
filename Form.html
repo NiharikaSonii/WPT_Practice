@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>
+       window.onload = (event) => {
+        document.getElementById("nm").value=localStorage.getItem("textvalue1");
+        document.getElementById("pho").value=localStorage.getItem("textvalue2");
+        document.getElementById("emi").value=localStorage.getItem("textvalue3");
+        document.getElementById("psw").value=localStorage.getItem("textvalue4");
+        };
+    </script>
+</head>
+<body> 
+    <h1>My page</h1>
+    <table>
+        <tr>
+            <td>
+                Name: <input type="text" id="nm" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Phone No: <input type="phone" name="phoneno" id="pho" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email: <input type="email" name="email" id="emi" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password: <input type="password" name="pass" id="psw" readonly>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
