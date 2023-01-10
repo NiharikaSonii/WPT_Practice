@@ -7,29 +7,31 @@
     <title>Registration Form</title>
     <script>
         function passvalue(){
-            var name=document.getElementById("td").value;
+            var name=document.getElementById("nam").value;
             var phoneNo=document.getElementById("ph").value;
             var EmailId=document.getElementById("em").value;
             var password=document.getElementById("ps").value;
-            localStorage.setItem("textvalue1",name);
-            localStorage.setItem("textvalue2",phoneNo);
-            localStorage.setItem("textvalue3",EmailId);
-            localStorage.setItem("textvalue4",password);
-        
-            return false;
+            localStorage.setItem("name",name);
+            localStorage.setItem("phoneno",phoneNo);
+            localStorage.setItem("EmailId",EmailId);
+            localStorage.setItem("password",password);
+            alert("Data added successfully");
+            window.location.href="/login";
         }
     </script>
 </head>
 <body>
     <h1 style="text-align: center;">Registration Form</h1>
-    <form action="Form.html">
+
+<div style="margin:auto ; display: table;">
+    <form>
         <table>
             <tr>
                 <td>
                     Name:
                 </td>
                 <td>
-                    <input type="text" id="td" placeholder="Name" name="nm">
+                    <input type="text" id="nam" placeholder="Name" name="nm">
                 </td>
             </tr>
             <tr>
@@ -60,10 +62,11 @@
             <tr>
                 <td>
                     <input type="reset" value="Reset" id="re">
-                    <input type="submit"  id="txt" value="submit" onclick="passvalue()">
+                    <input type="button"  id="txt" value="submit" onclick="passvalue()">
                 </td>
             </tr> 
         </table>
     </form>
+</div>
 </body>
 </html>

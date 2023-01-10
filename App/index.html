@@ -1,36 +1,57 @@
-<!DOCTYPE html>   
-<html>   
-<head>  
-<meta name="viewport" content="width=device-width, initial-scale=1">  
-<title> Login Page </title>  
-  <link rel="stylesheet" href="index.css"> 
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Login Page </title>
+  <link rel="stylesheet" href="index.css">
   <script>
-    function NewUser(){
-        location.href="RegistrationForm.html";
-    }
-    function dash(){
-        location.href="Dashboard.html";
-    }
+        function log(){
+          var name=document.getElementById("nm").value;
+          var pass=document.getElementById("ps").value;
+          var storenm=localStorage.getItem("name");
+          var storepass=localStorage.getItem("password");
+          if(name===storenm){
+            if(pass===storepass){
+              window.location.href="/dash";
+            }
+            else{
+              alert("Invalid password");
+            }
+          }
+          else{
+            alert("Invalid username");
+          }
+          
+        }
   </script>
-</head>    
+</head>
+
 <body>
-    <form>  
-        
-         <h1 style="text-align: center;">Login Form </h1> 
-        <div class="container">   
-            <label for="uname">Username : </label>   
-            <input type="text" placeholder="Enter Username" name="uname" required>  
-            <label for="pass">Password : </label>   
-            <input type="password" placeholder="Enter Password" name="pass" required>  
-            <button type="submit" onclick="dash()">Login</button>   
-            <button type="submit" onclick="NewUser()">Register Now</button>   
-            <input type="checkbox" checked="checked"> Remember me   
-            <button type="button" class="butn"> Cancel</button><br>   
-            Forgot <a href="#"> password? </a>     
-        <footer style="text-align: center;">
-            <a href="https://www.w3schools.com/">niharikasoni309@gmail.com</a>
-          </footer> <br>
-        </div>
-    </form>   
-</body>     
-</html> 
+<div style="background-color: aquamarine; margin-top: -25px;">
+  <header>
+    <h1 style="text-align: center; padding:20px ;">Login Form </h1>
+  </header>
+</div>
+
+ <div class="container" style="margin: auto; display: table; border: 2px solid black;padding: 35px; ;">
+      <form>
+      <label for="uname">Username : </label>
+      <input type="text" placeholder="Enter Username" id="nm" name="uname" required> <br>
+      <label for="pass">Password : </label>
+      <input type="password" placeholder="Enter Password" id="ps" name="pass" required> <br>
+      <button type="button" onclick="log()">Login</button> <br>
+      <button type="button" onclick="dash()">Register Now</button>
+      <input type="checkbox" checked="checked"> Remember me <br>
+      <button type="reset" class="butn">reset</button><br>
+      Forgot <a href="#"> password? </a>
+    </form> 
+</div>
+
+  <div style="position: fixed;bottom: 0%;background-color:aquamarine ;width: 98.8%;">
+    <footer style="text-align: center; padding: 20px;">
+      <a href="https://www.w3schools.com/">niharikasoni309@gmail.com</a>
+    </footer>
+  </div>
+</body>
+
+</html>
