@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        // function log(){
+        //   var name=document.getElementById("nm").value;
+        //   var pass=document.getElementById("ps").value;
+        //   var storenm=localStorage.getItem("name");
+        //   var storepass=localStorage.getItem("password");
+        //   if(name===storenm){
+        //     if(pass===storepass){
+        //       window.location.href="/Dashboard.html";
+        //     }
+        //     else{
+        //       alert("Invalid password");
+        //     }
+        //   }
+        //   else{
+        //     alert("Invalid username");
+        //   }
+          
+        // }
+        function dash (){
+           window.location.href ="/RegistrationForm";
+          }  
+      </script>
+</head>
+<body style="background-image: url(https://images.pexels.com/photos/1532771/pexels-photo-1532771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);">
+    <div style="margin-top:-25px;">
+        <header><h1 style=" background-color:  rgb(153, 136, 191); text-align: center; padding:20px ;">Login Here</h1></header>
+    </div>
+    <div style="margin: auto; display: table; border: 2px solid black;padding: 35px;">
+        <form action="/login" method="post">
+        <label for="uname">Username : </label>
+        <input type="text" placeholder="Enter Username" id="nm" name="uname" required> <br>
+        <label for="pass">Password : </label>
+        <input type="password" placeholder="Enter Password" id="ps" name="pass" required> <br>
+        <button type="submit" onclick="log()">Login</button> <br>
+        <button type="button" onclick="dash()">Register Now</button>
+        <input type="checkbox" checked="checked"> Remember me <br>
+        <button type="reset">Reset</button><br>
+        Forgot <a href="#"> password? </a>
+      </form> 
+  </div>
+<div style="position: fixed;bottom: 0%;width: 98.8%;">
+    <footer style=" background-color: rgb(153, 136, 191); text-align: center; padding: 20px;">
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+      <style>
+        button {
+          padding: 14px;
+        }
+      </style>
+
+    <script>
+      var str = "";
+      var value1 = "";
+      var operation = "";
+      var pre="";
+      function one() {
+        pre = str;
+        str = str+"1";
+        document.getElementById("result").value = str;
+      }
+      function two() {
+        pre = str;
+        str = str+"2";
+        document.getElementById("result").value = str;
+      }
+      function three() {
+        pre = str;
+        str = str+"3";
+        document.getElementById("result").value = str;
+      }
+      function sum() {
+          value1=str;
+          document.getElementById("result").value="";
+          str="";
+          operation="sum";
+      }
+      function equal(){
+        if(operation==="sum"){
+          result=parseInt(value1)+parseInt(str);
+          document.getElementById("result").value= result;
+        }
+      }
+     function back(){
+          str = ""
+          document.getElementById("result").value = str;
+     }
+    </script>
+
+</head>
+<body>
+  <div style="margin-top:-25px;">
+    <header><h1 style=" background-color: azure; text-align: center; padding:20px ;">Dashboard</h1></header>
+</div>
+   
+
+<div style="display: table;">
+  <table>
+     <tr>
+      <td colspan="5"><input type="text" name="" id="result"></td>
+    </tr>
+    <tr>
+      <td id="divide" colspan="2"><button style="padding: 38px;">/</button></td>
+      <td id="back" colspan="3"><button style="padding: 38px;" onclick="back()"><</button></td>
+     
+    </tr><tr>
+      <td id="7" ><button>7</button></td>
+      <td id="8" ><button>8</button></td>
+      <td id="9" ><button>9</button></td>
+      <td id="star" colspan="2"><button style="padding: 15.5px;">*</button></td>
+    </tr><tr>
+      <td id="4" ><button>4</button></td>
+      <td id="5" ><button>5</button></td>
+      <td id="6" ><button>6</button></td>
+      <td id="minus" colspan="2"><button style="padding: 15.5px;">-</button></td>
+    </tr><tr>
+      <td id="1" ><button onclick="one()">1</button></td>
+      <td id="2" ><button onclick="two()">2</button></td>
+      <td id="3" ><button onclick="three()">3</button></td>
+      <td id="plus" colspan="2"><button onclick="sum()">+</button></td>
+    </tr><tr>
+      <td id="dot" ><button>.</button></td>
+      <td id="0"><button>0</button></td>
+      <td id="hash" ><button>#</button></td>
+      <td id="equal" colspan="2"><button onclick="equal()">=</button></td>
+  </table>
+</div>
+<div style="position: fixed;bottom: 0%;width: 98.8%;">
+  <footer style=" background-color: rgb(153, 136, 191); text-align: center; padding: 20px;">
+  </footer>
+</div>
+</body>
+</html>
