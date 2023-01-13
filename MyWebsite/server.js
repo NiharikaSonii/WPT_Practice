@@ -44,16 +44,17 @@ app.post("/regis" , function(req, res) {
     var add = req.body.add;
     var ps = req.body.ps;
     var q = "insert into mytable values ("+id+" , '"+nm+"' , '"+add+"', '"+ps+"')";
-
+    var status="false";
     con.query(q, function(err, result){
         if(err){
         console.log(err);
+        status=true;
         }
         else {
         console.log(result);
         }
     })
-    if(status == "true") {
+    if(status == "false") {
         res.send("successfully updated")
     }
     else {
@@ -116,8 +117,8 @@ app.post("/page", (req, res) => {
     res.status(200).sendFile(path.join(__dirname, "page.html"));
  })
 
-app.listen(7070);
-console.log("port:7070");
+app.listen(5100);
+console.log("port:5100");
 // con.query("create database mydatabase",function(err,result){
 //     if(err) throw err;
 //     else 

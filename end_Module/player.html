@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function reset(){
+             document.getElementById("txt").value="";
+        }
+        function display(){
+            window.location.href="/ajay";
+        }
+    </script>
+</head>
+<body>
+    <form action="/niha" method="post">
+    Enter player Name:
+    <input type="text" id="txt" name="name">
+    <button type="submit">Search</button>
+    <button type="button" onclick="display()">Display</button>
+    <button type="button" onclick="reset()">Reset</button>
+</form>
+</body>
+</html>
